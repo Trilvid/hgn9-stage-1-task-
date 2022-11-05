@@ -3,12 +3,11 @@ const app = express();
 const fs = require('fs');
 
 app.get('/', async (req, res) => {
-    console.log(res.requestTime);
+    // console.log(res.requestTime);
     try {
-    const data = JSON.parse(fs.readFileSync(`data.json`));
-        res.status(200).json({
-            data
-        })
+    const data = await JSON.parse(fs.readFileSync(`data.json`));
+    // const data = await require('./data.js');
+    res.send(data);
     }
      catch (err) {
         res.status(500).json({

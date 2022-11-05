@@ -4,7 +4,7 @@
   "description": "HNG9 stage 1 task",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon index.js"
   },
   "author": "Trilvid",
   "license": "ISC",
